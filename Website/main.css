@@ -1,0 +1,248 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #0b0c10;
+}
+.navbar {
+    background:#0b0c10;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.navbar-brand {
+    font-family: 'Roboto Slab', serif;
+    color: #fafafa; 
+    font-weight: 200;
+}
+
+.navbar-brand img {
+    height: 3rem;
+}
+
+.nav-link {
+    font-family: 'Roboto', sans-serif;
+    color: #c5c6c7;
+    font-weight: 400;
+    cursor: pointer;
+    margin-right: 1em !important;
+}
+
+.active {
+    color: #45a29e;
+}
+.navbar-collapse {
+    justify-content: flex-end;
+}
+.navbar a:hover {
+    color: #45a29e;
+}
+
+.contents {
+	margin: 4em auto;
+    padding-left: 15%;
+    padding-right: 15%;
+	position: relative;
+}
+
+.row {
+	margin-bottom: 30px;
+}
+
+.header {
+    margin-bottom: 5%;
+}
+
+.title {
+    font-weight: 200;
+    color: #66fcf1;
+    font-family: 'Roboto Slab', serif;
+    font-size: 4em;
+    line-height: 1.5;
+}
+
+.subtitle {
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+    color: #c5c6c7;
+    line-height: 1.5;
+}
+
+.section-title {
+    font-weight: 200;
+    color: #66fcf1;
+    font-family: 'Roboto Slab', serif;
+    font-size: 3em;
+    line-height: 1.5;
+}
+
+.section-header {
+    font-weight: 300;
+    color: #c5c6c7;
+    font-family: 'Roboto Slab', serif;
+}
+
+.section-subheader {
+    font-weight: 400;
+    color: #c5c6c7;
+    font-family: 'Roboto', sans-serif;
+}
+
+.section-text {
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+    color: #c5c6c7;
+}
+
+.section-text a {
+    color: #45a29e;
+    text-decoration: none;
+}
+
+.math {
+    font-weight: 300;
+    font-family: 'Roboto Slab', serif;
+    color: #c5c6c7;
+}
+
+.declaration {
+    font-weight: 200;
+    font-family: 'Roboto Slab', serif;
+    color: #c5c6c7;
+}
+
+.footer {
+    font-family: "Roboto", sans-serif;
+    color: #c5c6c7;
+    text-align: center;
+    font-weight: 300;
+    padding-bottom: 5%;
+}
+
+.footer a {
+    font-family: 'Roboto Slab', serif;
+    color: #45a29e;
+}
+
+.footer a:hover {
+    text-decoration: none;
+    color: #66fcf1;
+}
+
+pre {
+    color: #0b0c10;
+}
+
+
+.project-group h3 {
+    color: #444444;
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+    line-height: 1.5;
+    font-weight: 300;
+    padding-left: 5%;
+}
+
+.arrow {
+    border: solid #009a9a;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 7px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 0%;
+}
+
+
+.img-fluid {
+    position: relative;
+    object-fit: cover;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #fafafa;
+    padding: 10%;
+}
+
+.container:hover .overlay {
+    opacity: 0.9;
+}
+
+.project-title {
+    color: #009a9a;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 5px;
+}
+
+.project-text p {
+    color: #444444;
+    text-align: left;
+    margin: 0%;
+    margin-bottom: 5px;
+    line-height: 1.5;
+}
+
+.project-text a {
+    color: #222222;
+    font-family: 'Nunito', sans-serif;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+.project-text a:hover {
+    color: #009a9a;
+    text-decoration: none;
+}
+
+.project-text a .arrow-link {
+    border: solid #222222;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transition: 0.1s ease;
+}
+
+.project-text a:hover .arrow-link {
+    border: solid #009a9a;
+    border-width: 0 2px 2px 0;
+    padding: 4px;
+}
+
+.contact {
+    font-family: "Nunito", sans-serif;
+    color: #444444;
+    text-align: center;
+    font-weight: 300;
+}
+
+.contact a {
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+    font-weight: 700;
+    color: #666666;
+}
+
+.contact a:hover {
+    color: #009a9a;
+}
