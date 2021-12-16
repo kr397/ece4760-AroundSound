@@ -18,10 +18,9 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <link rel="stylesheet" href="prism.css">
-        <!--
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-        <link rel="icon" href="favicon.ico" type="image/x-icon">
-        -->
+
+        <link rel="shortcut icon" type="image/png" href="images/icon.png">
+        <link rel="icon" type="image/png" href="images/icon.png">
 
     </head>
 
@@ -59,34 +58,35 @@
                     <h1 class="section-title">High-level <br>Design</h1>
                 </div>
 		        <div class="col-lg-8 col-md-6 col-sm-12">
-                    <p class="section-text">The AroundSound is an assistive device that helps visually impaired users sense and navigate through their surroundings with the help of 3D audio. We were inspired by the principle of echolocation used by bats and other underwater mammals like whales and dolphins. Just like these animals produce sounds and hear the echoes to perceive their surroundings, we wanted our users to be able to “hear” the obstacles around them and safely navigate through them. From our initial ideation, we developed a few design requirements for our project:</p>
+                    <p class="section-text" style="text-align:justify;">The AroundSound is an assistive device that helps visually impaired users sense and navigate through their surroundings with the help of directional audio. We were inspired by the principle of echolocation used by bats and other underwater mammals like whales and dolphins. Just like these animals produce sounds and hear the echoes to perceive their surroundings, we wanted our users to be able to “hear” the obstacles around them and safely navigate through them. From our initial ideation, we developed a few design requirements for our project:</p>
                     <ul class="section-text">
                         <li>Map the environment in front of the user over a set of distance measurements in a specified visual range. </li>
                         <li>Enable the user to perceive the distance of each of the measurement points through distinct sounds.</li>
                         <li>Enable the user to determine the direction of every measurement point by making the sound 3D, i.e. sound that perceivably originates from different points in 3D space.</li> 
                     </ul>
-                    <p class="section-text"> Therefore, we present AroundSound, a walking stick attachment that maps the surroundings in front of a visually impaired user from the horizontal range -60 degrees to +60 degrees and informs them of the distance of any obstacles along seven sub-ranges in the visual range through distinct sounds coming from the direction of the sub-ranges. This device helps the user mentally picture their environment as illustrated below, and allows them to determine the safest direction to move forward. The interaction flow of AroundSound is as follows: </p>
-                    <ol class="section-text">
+                    <p class="section-text" style="text-align:justify;"> Therefore, we present AroundSound, a walking stick attachment that maps the surroundings in front of a visually impaired user from the horizontal range -60 degrees to +60 degrees and informs them of the distance of any obstacles along seven sub-ranges in the visual range through distinct sounds coming from the direction of the sub-ranges. This device helps the user mentally picture their environment as illustrated below, and allows them to determine the safest direction to move forward. The interaction flow of AroundSound is as follows: </p>
+                    <ol class="section-text" style="text-align:justify;">
                         <li>The user places the staff in front of them such that the button on it is facing straight ahead. </li> 
                         <li>They press the button to start the scanning of the environment, which takes about eight seconds. </li>
                         <li>As the device scans the environment from right to left, it produces seven distinct string notes that seem to be coming from different directions, each note informing the user of the distance of any obstacle in that direction. </li>
                         <li>The user is able to determine the distances by the frequency of the notes; the higher the frequency, the closer the object. </li>
                     </ol>
-                    <p class="section-text">As the final project for the ECE 4760 Designing with Microcontrollers course, we have implemented this system on the SECABB development board with a PIC32 microcontroller, as is used in the course labs. In addition to the development board, we use an HC-SR04 ultrasonic sensor for distance measurement, an SG-90 mini servo with pan-tilt for movement of the distance sensor, and an audio jack with headphones for sound production. The software implementation of each of these systems was done in C using the MPLAB X IDE 3.05, with the same setup as the one used in all the labs. </p>
-                    <p class="section-text">Since the AroundSound is assistive technology for users with a visual impairment, it comes under the purview of ISO/TC 173/SC 7 and RESNA VIVHI. However, the ISO/TC 173/SC 7 has not yet published any standard that would directly apply to this device, and the RESNA VIVHI has been temporarily suspended, so there are no official standards that our project needs to adhere to. Nonetheless, since this is a next-to-body form of wearable technology that we expect to always be close to the user, it is important to ensure that the device is completely safe for them. This involves physical safety by removing any sharp edges or other ways the user might get hurt, and also electrical safety by keeping all the wires unexposed. Moreover, while using the device, the user should not be put in any hazardous situations, for example the device headphones should not isolate the user from any noise signals or alerts in the environment. </p>
-                    <p class="section-text">While we found no products in the market or patents for such a product, there are a few research projects that use 3D sound for navigational purposes (Aguerrevere et al., 2004; Gunther et al., 2004; Schoop et al. 2018). Even in ECE 4760 there have been two projects in previous years with a similar motivation: Auditory Navigator (Spring 2010) and Sound Navigation (Fall 2015), which are both focused on GPS navigation based on sound localization. While we took a different direction with an assistive device, the reports of these projects were extremely helpful for us to develop a 3D sound production. </p>
-
-                    <!-- <pre><code class="language-clike">#define lol "Hello World"</code></pre> -->
+                    <figure>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/iMMObodAq6w?start=424&end=594" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <figcaption>Video: Project demonstration in lab. Full video at <a href="">YouTube</a></figcaption>
+                    </figure>
+                    
+                    <p class="section-text" style="text-align:justify;">As the final project for the ECE 4760 Designing with Microcontrollers course, we have implemented this system on the SECABB development board with a PIC32 microcontroller, as is used in the course labs. In addition to the development board, we use an HC-SR04 ultrasonic sensor for distance measurement, an SG-90 mini servo with pan-tilt for movement of the distance sensor, and an audio jack with headphones for sound production. The software implementation of each of these systems was done in C using the MPLAB X IDE 3.05, with the same setup as the one used in all the labs. </p>
+                    <p class="section-text" style="text-align:justify;">Since the AroundSound is assistive technology for users with a visual impairment, it comes under the purview of ISO/TC 173/SC 7 and RESNA VIVHI. However, the ISO/TC 173/SC 7 has not yet published any standard that would directly apply to this device, and the RESNA VIVHI has been temporarily suspended, so there are no official standards that our project needs to adhere to. Nonetheless, since this is a next-to-body form of wearable technology that we expect to always be close to the user, it is important to ensure that the device is completely safe for them. This involves physical safety by removing any sharp edges or other ways the user might get hurt, and also electrical safety by keeping all the wires unexposed. Moreover, while using the device, the user should not be put in any hazardous situations, for example the device headphones should not isolate the user from any noise signals or alerts in the environment. </p>
+                    <p class="section-text" style="text-align:justify;">While we found no products in the market or patents for such a product, there are a few research projects that use 3D sound for navigational purposes (Aguerrevere et al., 2004; Gunther et al., 2004; Schoop et al. 2018). Even in ECE 4760 there have been two projects in previous years with a similar motivation: Auditory Navigator (Spring 2010) and Sound Navigation (Fall 2015), which are both focused on GPS navigation based on sound localization. While we took a different direction with an assistive device, the reports of these projects were extremely helpful for us to develop a 3D sound production. </p>
                     
                 </div>
             </div>
 
         </div>
-
-        <footer class="text-center">
-            <div class="footer">
-                <hr>
-                <p>Amulya Khurana <a href="mailto:ak2425@cornell.edu">ak2425</a> | Aparajito Saha <a href="mailto:as2537@cornell.edu">as2537</a> | Krithik Ranjan <a href="mailto:kr397@cornell.edu">kr397</a></p>
+        <footer class="footer mt-auto py-3">
+            <div class="container">
+                <p class="footer-text">Amulya Khurana <a href="mailto:ak2425@cornell.edu">ak2425</a> | Aparajito Saha <a href="mailto:as2537@cornell.edu">as2537</a> | Krithik Ranjan <a href="mailto:kr397@cornell.edu">kr397</a></p>
             </div>
         </footer>
 

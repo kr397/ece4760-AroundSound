@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+ 
+        <title>AroundSound</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <link rel="stylesheet" href="prism.css">
+
+        <link rel="shortcut icon" type="image/png" href="images/icon.png">
+        <link rel="icon" type="image/png" href="images/icon.png">
+
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-md">
+            <a class="navbar-brand" href="index.html"><img src="images/logo_2.png"></a>
+            <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="main-navigation">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="design.html">DESIGN</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="system.html">SYSTEM</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="results.html">RESULTS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="conclusion.html">CONCLUSION</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="appendix.html">APPENDIX</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container-fluid contents">
+
+            <div class="row align-items-start row-eq-height">
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <h1 class="section-title">Conclusion <br></h1>
+                </div>
+		        <div class="col-lg-8 col-md-6 col-sm-12">
+                    <p class="section-text" style="text-align:justify;">As an initial prototype, AroundSound functioned as we expected. We were able to test the device in simple environments with solid obstacles set up around the user and determine the angular placement and distance of the obstacles. Using 3D audio proved especially useful since the intensity and time differences between ears allowed the user to perceive the directionality of the sound and accordingly anticipate the obstacle’s position. In addition, the use of DDS and frequency modulation to generate the sound and the mapping of distances to discrete musical notes allowed us to distinguish distance through tones that sounded more appealing than a synthesized beep. We factored in usability considerations as well, keeping a button oriented directly away from the user so that it would be possible to establish the “start” state of the system as well as actuate the system only when desired by the user.</p>
+                    <p class="section-text" style="text-align:justify;">There are several extensions to the system that are worth considering to increase its mobility and applicability. In particular, we are currently constrained in the range of the device due to the connection to the speakers for amplification - future adaptations of this system should consider implementing a gain circuit that can be mounted onto the walking stick platform to ensure that AroundSound could be used independent of any power cords. We did not test the PIC32 board with a portable power supply since we were restricted in mobility by the speaker - once again, it is important to attempt to make this aspect of the device independent of a power strip connection to ensure system mobility.</p>                    
+                    <p class="section-text" style="text-align:justify;">Another limitation to factor in is the ultrasonic sensor’s ability to distinguish between surfaces. While it is reliable for hard surfaces such as walls, sheets of cardboard and boxes (the principal components of our testing environment), the sensor cannot detect soft surfaces such as people and clothing since sound waves are absorbed by these objects. Using an IR or laser based sensor would prove more effective at such a task, since in a realistic scenario, we would expect a user to be in an environment that does not consist of predictable surfaces and probably contains people. In addition, we need to consider using an audio device that does not restrict the user’s hearing capabilities - bone conduction headphones would allow ambient noise to filter through while transmitting the 3D audio from AroundSound, ensuring that the user is able to pick up auditory cues from their surroundings.</p>
+                    <p
+                    <p class="section-text">Considering that this device is aimed at persons with visual impairments, it is important to consider the impact of such a device on the community. In no way do we misrepresent the capabilities of this prototype - it is not yet fully portable, nor is it foolproof. It can be used to support persons with visual impairments by detecting solid objects with a suitable width (around tens of centimeters) in a 2 meter range and may have scope for further improvement, but it should not be assumed that this version of the device can reliably navigate through complex environments. We followed the IEEE code of ethics in our design, and anticipate no other ethical considerations since the device does not alter any human behavior and its usage is completely voluntary.</p>
+                    <p class="section-text">We did not employ the intellectual property of any third party while conceiving and developing this device. We used open source libraries provided by MPLAB, as well as past projects in ECE 4760 to guide our work, but have not directly copied any source code or hardware to implement our product. We attribute all credit to the authors of the open source libraries, as well as to Professors Hunter Adams and Bruce Land for their webpages dedicated to explaining the use of the libraries. We are not in conflict with any other property rights or patents. By releasing our hardware design and software, we also establish our intent to not patent this device. 
+                    </p>
+                    <p class="section-text" style="text-align:justify;">We enjoyed developing and testing this device! While we know that there are limitations to AroundSound’s performance in its current state, we have established all core functionality that such an assistive system would need, and any future additions can be easily implemented depending on the developer. We are glad to have designed a product that may be of use someday and have learned some important lessons about system implementations over the course of this project.</p>                    
+                </div>
+            </div>
+
+        </div>
+        <footer class="footer mt-auto py-3">
+            <div class="container">
+                <p class="footer-text">Amulya Khurana <a href="mailto:ak2425@cornell.edu">ak2425</a> | Aparajito Saha <a href="mailto:as2537@cornell.edu">as2537</a> | Krithik Ranjan <a href="mailto:kr397@cornell.edu">kr397</a></p>
+            </div>
+        </footer>
+
+        <script src="prism.js"></script>
+
+    </body>
